@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <div class="container"><div class="row"><div class="col-sm-12">
+    <carousel class="home-carousel">
+      <slide *ngFor="let image of homeImageList">
+        <a href="{{image.link}}" (click)="preventNormal($event, image)">
+          <img class="home-carousel-image" src="{{image.image}}" alt="First slide">
+        </a>
+        <div class="carousel-caption">
+          <h3>{{image.title}}</h3>
+          <p>{{image.description}}</p>
+          <a class="btn btn-default" href="{{image.link}}">See video</a>
+        </div>
+      </slide>
+    </carousel>
+  </div></div></div>
+</div>
+  
+  
